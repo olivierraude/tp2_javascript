@@ -1,0 +1,80 @@
+* {     
+    font-family: 'Bebas Neue', cursive;     
+}
+
+body {
+    background-color: #88ffff;
+    margin: 0;
+    padding: 8vw;
+}
+
+h1 {     
+    font-family: 'Sigmar One', cursive;    
+}
+
+section {
+    margin-top: 8vw;;
+}
+
+article {
+    margin-top: 6vw;;
+}
+
+a {
+    text-decoration: none;  
+}
+
+a + a {
+    margin-left: 4vw;
+}
+
+a:hover {
+        color: #009faf;
+}
+
+ul {
+    margin: 4vw 0 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.error {
+    border: solid 1px red;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    width: 100%;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(209, 200, 200, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.grid-item:hover {
+    background-color: #ffff8b;
+    border: 1px solid rgba(248, 247, 171, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #c9bc1f;
+}
