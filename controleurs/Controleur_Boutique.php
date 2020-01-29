@@ -6,8 +6,21 @@
 		public function traite(array $params)
 		{
 			$this->afficheVue("Head");
+
+			$vue = "Header";	
+			$this->afficheVue($vue);
+			$vue = "RechercheParOrdre";	
+			$this->afficheVue($vue);
 			
-			if(isset($params["action"]))
+			//action par défaut
+			$modeleBoutique = new Modele_Boutique();
+			//$tri = "id";
+			$data = $modeleBoutique->obtenirProduits('id');
+			$vue = "ListeProduits";		
+			$this->afficheVue($vue, $data);
+
+/*
+			else if(isset($params["action"]))
 			{
 				//modèle et vue vides par défaut
 				$data = array();
@@ -17,8 +30,6 @@
 				switch($params["action"])
 				{
 					case "RechercheParAlpha":
-						$vue = "Header";
-						$this->afficheVue($vue);	
 										
 						$modeleBoutique = new Modele_Boutique();
 						$data = $modeleBoutique->obtenirProduitsParAlpha();
@@ -28,8 +39,6 @@
 						break;
 					
 					case "RechercheParPrix":
-						$vue = "Header";
-						$this->afficheVue($vue);	
 										
 						$modeleBoutique = new Modele_Boutique();
 						$data = $modeleBoutique->obtenirProduitsParPrix();
@@ -47,13 +56,7 @@
 						break;
 				}			
 			}
-			else
-			{
-				//action par défaut
-				$modeleBoutique = new Modele_Boutique();							
-				$vue = "Accueil";		
-				$this->afficheVue($vue);
-			}
+*/			
 			$this->afficheVue("Footer");
 		}
 	}

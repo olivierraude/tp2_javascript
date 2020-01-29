@@ -1,11 +1,10 @@
 <div data-component="ProduitList">
 
-	<div>
-		<a href="" data-js-btn>Liste de tous les produits</a>
-		<a href="./index.php?Boutique&action=RechercheParPrix">Recherche par ordre de prix</a>
-		<a href="./index.php?Boutique&action=RechercheParAlpha">Recherche par ordre alphabétique</a>
-
-	</div>
+	<select>
+		<option href="" data-js-btn>Liste de tous les produits</option>
+		<option href="./index.php?Boutique&action=RechercheParPrix">Recherche par ordre de prix</option>
+		<option href="./index.php?Boutique&action=RechercheParAlpha">Recherche par ordre alphabétique</option>
+	</select>
 
 
 	<div data-js-results></div>

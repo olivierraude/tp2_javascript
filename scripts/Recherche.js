@@ -4,14 +4,9 @@ class ProduitList {
 
         this._elSelect = this._el.querySelector('[data-js-select]');
         this._elResults = this._el.querySelector('[data-js-results]');
-        //this._elTile = this._el.querySelector('[data-js-product]');
-        //this._elBtn = this._el.querySelector('[data-js-more]');
-
     
         console.log(this._elSelect);
         console.log(this._elResults);
-        //console.log(this._elTile);
-        //console.log(this._elBtn);
 
         this.init();
     }
@@ -25,22 +20,6 @@ class ProduitList {
             
             this.showProductList();
         });
-/*     
-        this._elTile.addEventListener('click', (e) => {
-            e.preventDefault();
-
-            console.log('click');
-
-            //this.showMoreProduct();
-        });
-        
-        this._elBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-
-            console.log('click');
-
-            //this.showMoreProduct();
-        });*/
     }
 
     showProductList = () => {
