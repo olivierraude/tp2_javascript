@@ -1,13 +1,7 @@
-<article>
-	<h3>Tous les restaurants de ce type</h3>
-	<ul>
-	<?php
-		foreach($data as $produit)
-		{
-	?>
-		<img src=<?= $produit["produitImage"]?>></img><li><?= "Nom : " . $produit["produitNom"]?></li>
-	<?php
-		}
-	?>
-	</ul>
-</article>
+<section class="liste" data-js-produit-trie>
+	<div data-js-results></div>
+</section>
+
+<div class="load">
+	<button class="more"><img class="arrow" src="/JS/tp2/assets/images/logo/plus.svg" alt="plus"></button>
+</div>

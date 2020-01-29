@@ -1,19 +1,73 @@
 * {     
-    font-family: 'Bebas Neue', cursive;     
+    font-family: 'Poppins', sans-serif;
+}
+
+.page-container{
+    position: relative;
 }
 
 body {
-    background-color: #88ffff;
+    background-color: #4dd0e1;
     margin: 0;
-    padding: 8vw;
+}
+
+.arrow {
+    width: 4em;
+}
+
+.more {
+    align-items: center;
+    background-color: #c9bc1f;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+.more:hover {
+    background-color: #ffee58;
+    background-image: src='/JS/tp2/assets/images/logo/add.svg';
 }
 
 h1 {     
-    font-family: 'Sigmar One', cursive;    
+    font-family: 'Sigmar One', cursive;
+    font-size: 4em;
+    margin-left: 0.5em;
+}
+
+.titre {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+header {     
+    background-color: #c9bc1f;
+    display: flex;
+    justify-content: space-between;
+    height: 6em;
+}
+
+.cart{
+    height: 6em;
+    margin-right: 2em;
+    width: 3em;
 }
 
 section {
-    margin-top: 8vw;;
+    margin: 2vw 0 0;
+    padding: 2vw;
+}
+
+
+
+footer {
+    background-color: #88ffff;
+    bottom: 0;
+    height: 5rem;
+    padding-top: 5em;
+    text-align: center;
+    width: 100%;
 }
 
 article {
@@ -33,7 +87,7 @@ a:hover {
 }
 
 ul {
-    margin: 4vw 0 0;
+    margin: 0 0 2vw 0;
     padding: 0;
 }
 
@@ -42,10 +96,13 @@ li {
     margin-top: 20px;
 }
 
+p{
+    color: #009faf;
+}
 
 img {
-    width: 100%;
     height: auto;
+    width: 90%;
 }
 
 .error {
@@ -55,18 +112,19 @@ img {
 .wrapper {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-gap: 10px;
+    grid-gap: 15px;
     width: 100%;
 }
 
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: white;
     border: 1px solid rgba(209, 200, 200, 0.8);
-    padding: 20px;
-    font-size: 20px;
-    text-align: center;
     border-radius: 5px;
-    box-shadow: 5px 5px 5px grey;
+    font-size: 20px;
+    height: 17em;
+    padding: 20px;
+    text-align: center;
+
 }
 
 .grid-item:hover {
@@ -77,4 +135,11 @@ img {
     text-align: center;
     border-radius: 5px;
     box-shadow: 2px 2px 5px #c9bc1f;
+}
+
+.load {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vw;
 }

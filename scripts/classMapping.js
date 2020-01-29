@@ -1,4 +1,4 @@
 const classMapping = {
-    'FormValidation': FormValidation,
-    'ProduitList': ProduitList
+    'ProduitList': ProduitList,
+    'FormValidation': FormValidation
 };

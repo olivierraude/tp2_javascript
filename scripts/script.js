@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-
-    let components = document.querySelectorAll('[data-component]');
+	
+	let components = document.querySelectorAll('[data-component]');
 
 	for (let i = 0, l = components.length; i < l; i++) {
 		
