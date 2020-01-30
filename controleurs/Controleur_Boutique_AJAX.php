@@ -17,6 +17,7 @@
 				//ce switch détermine la vue $vue et obtient le modèle $data
 				switch($params["action"])
 				{
+<<<<<<< HEAD
 					//Functions et cas à modifier => restaurants = produits
 					case "afficheListeProduits":
 						if (isset($params["tri"]))
@@ -29,6 +30,17 @@
 						}
 						break;	
 /*
+=======
+    //Functions et cas à modifier => restaurants = produits
+					case "afficheListeProduits":						
+						$modeleBoutique = new Modele_Boutique();
+                        $data = $modeleBoutique->obtenirProduits($tri);
+                        $vue = "ListeProduitsTrie";
+                        $this->afficheVue($vue, $data);
+						
+						break;	
+
+>>>>>>> 2a5a426b46e8475a82942dd10a1b265abc988307
                     case "afficheProduitParPrix":
 						//modèle et vue vides par défaut
 						$data = array();

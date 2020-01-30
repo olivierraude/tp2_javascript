@@ -11,6 +11,7 @@
 			$this->afficheVue($vue);
 			$vue = "RechercheParOrdre";	
 			$this->afficheVue($vue);
+<<<<<<< HEAD
 			
 			//action par défaut
 			$modeleBoutique = new Modele_Boutique();
@@ -19,6 +20,19 @@
 			$vue = "ListeProduits";		
 			$this->afficheVue($vue, $data);
 
+=======
+			
+			
+		
+			//action par défaut
+			$modeleBoutique = new Modele_Boutique();
+			$tri = "id";
+			$data = $modeleBoutique->obtenirProduits($tri);
+			$vue = "ListeProduits";		
+			$this->afficheVue($vue, $data);
+
+		
+>>>>>>> 2a5a426b46e8475a82942dd10a1b265abc988307
 /*
 			else if(isset($params["action"]))
 			{

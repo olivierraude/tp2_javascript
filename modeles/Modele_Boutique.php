@@ -12,7 +12,11 @@
 			{
 				$stmt = $this->connexion->prepare("SELECT produits.id as produitId, produits.nom as produitNom, produits.prix as produitPrix, produits.lienimage as produitImage, produits.inventaire as produitInventaire
 													FROM produits
+<<<<<<< HEAD
 													ORDER BY '" . $tri . "' ASC
+=======
+													ORDER BY $tri ASC
+>>>>>>> 2a5a426b46e8475a82942dd10a1b265abc988307
 													LIMIT 12");
 				$stmt->execute();
 				return $stmt->fetchAll();
