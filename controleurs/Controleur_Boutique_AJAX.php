@@ -17,50 +17,19 @@
 				//ce switch détermine la vue $vue et obtient le modèle $data
 				switch($params["action"])
 				{
-<<<<<<< HEAD
-					//Functions et cas à modifier => restaurants = produits
 					case "afficheListeProduits":
-						if (isset($params["tri"]))
-                        {	
-						var_dump($params["tri"]);
-						$modeleBoutique = new Modele_Boutique();
-                        $data = $modeleBoutique->obtenirProduits($params["tri"]);
-                        $vue = "ListeProduits";
-                        $this->afficheVue($vue, $data);
+						if ((isset($params["tri"]) && $params["offset"]))
+                        {
+							$modeleBoutique = new Modele_Boutique();
+							$data = $modeleBoutique->obtenirProduits($params["tri"],$params["offset"]);
+							//var_dump($params["tri"]);
+							//var_dump($params["offset"]);
+                        	//$vue = "Resultats";
+                        	$vue = "ListeProduits";
+                        	$this->afficheVue($vue, $data);
 						}
 						break;	
-/*
-=======
-    //Functions et cas à modifier => restaurants = produits
-					case "afficheListeProduits":						
-						$modeleBoutique = new Modele_Boutique();
-                        $data = $modeleBoutique->obtenirProduits($tri);
-                        $vue = "ListeProduitsTrie";
-                        $this->afficheVue($vue, $data);
-						
-						break;	
-
->>>>>>> 2a5a426b46e8475a82942dd10a1b265abc988307
-                    case "afficheProduitParPrix":
-						//modèle et vue vides par défaut
-						$data = array();
-						$modeleBoutique = new modele_Boutique();
-						$data = $modeleBoutique->obtenirProduitsParPrix();
-						$vue = "ListeProduits";
-						$this->afficheVue($vue, $data);
-						
-						break;
-                    
-                    case "afficheProduitParAlpha":  
-    //modèle et vue vides par défaut
-						$data = array();
-						$modeleBoutique = new modele_Boutique();
-						$data = $modeleBoutique->obtenirProduitsParAlpha();
-						$vue = "ListeProduits";
-						$this->afficheVue($vue, $data);
-                        
-                        break;	
-*/           	
+          	
 					default:
 						echo "ERROR IN SWITCH";		
 				}						

@@ -11,6 +11,18 @@ body {
     margin: 0;
 }
 
+.btn--hidden {
+    display: none;
+}
+
+.btn--command {
+    margin-top: 3.5em;
+    margin-right: 2em;
+}
+
+.command{
+    display: inline-flex;
+}
 .arrow {
     width: 4em;
 }
@@ -58,8 +70,6 @@ section {
     margin: 2vw 0 0;
     padding: 2vw;
 }
-
-
 
 footer {
     background-color: #88ffff;
