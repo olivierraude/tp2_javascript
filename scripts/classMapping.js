@@ -1,5 +1,5 @@
 const classMapping = {
     'Form': Form,
-    'ProductList': ProductList,
-    'ProductSort' : ProductSort
+    'Tiles': Tiles,
+    'ProductList': ProductList
 };

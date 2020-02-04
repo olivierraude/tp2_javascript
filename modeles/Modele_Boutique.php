@@ -13,7 +13,7 @@
 				$stmt = $this->connexion->prepare("SELECT produits.id as produitId, produits.nom as produitNom, produits.prix as produitPrix, produits.lienimage as produitImage, produits.inventaire as produitInventaire
 													FROM produits
 													ORDER BY $tri ASC
-													LIMIT $offset, 12");
+													LIMIT 0, $offset");
 				$stmt->execute();
 				return $stmt->fetchAll();
 			}	

@@ -4,11 +4,10 @@
 		//la fonction qui sera appelée par le routeur
 		public function traite(array $params)
 		{				
-            if(isset($params["action"]))
+							
+			if(isset($params["action"]))
 			{
-				//retirer la vue de produits non triés
-				//$this._el.removeChild($this._el.firstChild);
-
+				
 				//modèle et vue vides par défaut
 				$data = array();
                 $vue = "";					
@@ -17,6 +16,15 @@
 				//ce switch détermine la vue $vue et obtient le modèle $data
 				switch($params["action"])
 				{
+					case "affichePremiereListe":
+						//var_dump('Ça load!aussi');
+						$modeleBoutique = new Modele_Boutique();
+						$data = $modeleBoutique->obtenirProduits('id',12);
+						$vue = "ListeProduits";		
+						$this->afficheVue($vue, $data);
+							
+						break;
+
 					case "afficheListeProduits":
 						if ((isset($params["tri"]) && $params["offset"]))
                         {
@@ -24,7 +32,6 @@
 							$data = $modeleBoutique->obtenirProduits($params["tri"],$params["offset"]);
 							//var_dump($params["tri"]);
 							//var_dump($params["offset"]);
-                        	//$vue = "Resultats";
                         	$vue = "ListeProduits";
                         	$this->afficheVue($vue, $data);
 						}
@@ -36,9 +43,8 @@
 			}
 			else
 			{
-				//action par défaut
-				echo "ERROR";					
-			}			
+				echo "ERROR dans affiche";				
+			}	
 		}	
 	}
 ?>

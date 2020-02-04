@@ -4,9 +4,11 @@
 	</div>
 	<div class="command" data-component="Form">
 		<div>
-			<button class="btn--command btn--hidden" data-js-command>Commander</button>
+			<button href="./index.php?Boutique&action=afficheTableau" class="btn--command btn--hidden" data-js-command> Commander </button>
 		</div>	
 		<div>
+			<div class="items" data-js-items></div>
+			<p class="nbItems" data-js-nbItems></p>
 			<img class="cart" src="/JS/tp2/assets/images/logo/cart.svg" alt="logo">
 		</div>
 	</div>

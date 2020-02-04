@@ -1,29 +1,25 @@
-<section class="liste" data-component="ProductList">
+<section class="liste" >
 
-	<div data-js-results>
+	<ul class="wrapper">
 
-		<ul class="wrapper" >
+		<?php
 
-			<?php
-
-				foreach($data as $produit)
-				{
-				?>
-					<div class="grid-item" data-js-product>
-						<li>
-							<img src=<?= $produit["produitImage"]?> data-js-image>
-							<p class="name" data-js-name> <?=$produit["produitNom"]?> </p>
-							<p class="price" data-js-price> <?=$produit["produitPrix"] . "$"?> </p>
-						</li>
-					</div>	
-				<?php
-				}
+			foreach($data as $produit)
+			{
 			?>
-		</ul>
+			<button class="grid-item" data-js-product disabled>
+				<li value=<?= $produit["produitInventaire"]?> data-js-id>
+					<img class="imgProduit" src=<?= $produit["produitImage"]?> data-js-image>
+					<div class="refProduit">
+						<p class="name" data-js-name> <?=$produit["produitNom"]?> </p>
+						<p class="price" data-js-price> <?=$produit["produitPrix"] . "$"?> </p>
+					</div>
+				</li>
+			</button>		
+			<?php
+			}
+		?>
 
-	</div>
-	
-	<!-- <div class="load">
-		<button class="more" data-js-more><img class="arrow" src="/JS/tp2/assets/images/logo/plus.svg" alt="plus"></button>
-	</div> -->
+	</ul>
+
 </section>
